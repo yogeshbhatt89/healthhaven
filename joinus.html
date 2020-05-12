@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<title>Health Haven</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
+<link href="styles.css" rel="stylesheet" type="text/css">
+
+<style>
+h1{
+color:red;
+font-size:40px;
+
+}
+h4{
+text-align:center;
+font-size:30px;
+}
+</style>
+<script>
+
+
+function doClear()
+{
+	document.gym.firstname.value  ="";
+	document.gym.lastname.value  ="";
+	document.gym.zip.value  ="";
+	document.gym.email.value  ="";
+	document.gym.phone.value  ="";
+	document.gym.comment.value="";
+	return;
+}
+
+function doSubmit()
+{
+	if (validateText()==false)
+	{
+		alert("Required data missing please complete the form and click submit.");
+	}
+	else
+		alert("Your form has been submitted.Thank you!");
+	return;
+}
+
+function validateText()
+{
+	var firstname =  document.gym.firstname.value;
+	if (firstname.length ==  0)  return false;
+	var lastname = document.gym.lastname.value;
+	if (lastname.length == 0) return false;
+	var zip  = document.gym.zip.value;
+	if (zip.length == 0) return false;
+	var email =  document.gym.email.value;
+	if (email.length == 0) return false;
+	var phone =  document.gym.phone.value;
+	if (phone.length == 0) return false;
+	return true;
+}
+</script>
+
+
+
+</head>
+<body>
+<a name="top"></a>
+<header>
+<div class="container">
+  <a href="index.html"><img src="logo.jpg" alt=" pic of logo" class="logo"></a>
+
+<nav>
+        <ul>
+		  <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="joinus.html">Join us</a></li>
+		  <li>A Healthy mind in a Healthy body!</li>
+		  <li>1-800-532-1100</li>  	
+          
+        </ul>
+</nav>
+</div>
+</header>
+<div class="form">
+
+	<form name="gym">
+		<h1>Please fill out the following form </h1>
+		<h4>If you have any questions regarding the gym and facilities feel free to ask in the comment section below.</h4>
+		<br>
+		<label>First Name:</label>
+		<input name="firstname" size="50" type="text">
+		<br><br><br>
+		<label>Last Name:</label> 
+		<input name="lastname" size="50" type="text">
+		<br><br><br>
+		<label>ZipCode:</label>
+		<input name="zip" size="50" type="text">
+		<br><br><br>
+		<label>E-Mail:</label>
+		<input name="email" size="50" type="text">
+		<br><br><br>
+		<label>Phone:</label><input name="phone" size="50" type="text">
+		<br><br>
+		<p>Comments</p>
+		<textarea  rows="6" cols="80" name="comment" >
+		</textarea>
+		<br><br>
+		<input class="button" type="button" value="SUBMIT" onClick="doSubmit()" > 
+
+		<input class="button" type="reset" value="CLEAR" onClick="doClear()" >
+	</form>
+</div>
+
+<footer>
+	<h3>All rights reserved copyright 2019</h3>
+	<p>761 Old Coffee Court
+	Oceanside, NY 11572</p>
+	<a href="#top">Go to Top</a>
+</footer>
+</body>
+</html>
